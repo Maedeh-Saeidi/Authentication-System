@@ -14,7 +14,7 @@ export default function LoginPage() {
 
   const { isFetching, isLoading, isError, refetch } = useGetUserInfo();
 
-  const validatePhone = (value: string) => /^(\+98|0)?9\d{9}$/.test(value);
+  const validatePhone = (value: string) => /^(\+98|0|0098)9\d{9}$/.test(value);
 
   const handleLogin = async () => {
     if (!validatePhone(phone)) {
